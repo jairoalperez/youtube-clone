@@ -160,14 +160,12 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
             </div>
           </div>
 
-          {/* Suggested videos */}
-          <div className="space-y-3">
-            {suggestedVideos.map((video) => (
-              <div key={video.id} className="flex gap-2">
-                <VideoCard video={video} />
-              </div>
-            ))}
-          </div>
+            {/* Suggested videos */}
+            <div className="space-y-3">
+                {suggestedVideos.map((video) => (
+                    <VideoCard key={video.id} video={video} variant="horizontal" />
+                ))}
+            </div>
         </div>
       </div>
     </AppLayout>
