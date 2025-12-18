@@ -50,7 +50,7 @@ export function Header({ onMenuClick }: HeaderProps) {
             href="/"
             className="flex items-center gap-1 text-xl font-bold text-white hover:text-orange-500 transition-colors"
           >
-            <span className="bg-orange-500 text-black px-2 py-1 rounded">YTC</span>
+            <span className="bg-orange-500 text-black px-2 py-1 rounded">CigarTube</span>
           </Link>
         </div>
 
