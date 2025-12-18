@@ -21,9 +21,9 @@ export default function ManageVideosPage() {
 
         <div className="space-y-4">
           {myVideos.map((video) => (
-            <div key={video.id} className="bg-gray-900 border border-gray-800 rounded-lg p-4 flex items-center gap-4">
+            <div key={video.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 flex items-center gap-4">
               {/* Thumbnail */}
-              <div className="relative w-40 h-24 bg-gray-800 rounded flex-shrink-0">
+              <div className="relative w-40 h-24 bg-zinc-800 rounded flex-shrink-0">
                 <Image
                   src={video.thumbnail || "/placeholder.svg"}
                   alt={video.title}
@@ -35,7 +35,7 @@ export default function ManageVideosPage() {
               {/* Info */}
               <div className="flex-1 min-w-0">
                 <h3 className="text-white font-medium mb-1">{video.title}</h3>
-                <div className="flex items-center gap-4 text-sm text-gray-400">
+                <div className="flex items-center gap-4 text-sm text-zinc-400">
                   <span>{video.views} views</span>
                   <span>{video.uploadedAt}</span>
                   <span>{video.likes} likes</span>
@@ -45,10 +45,10 @@ export default function ManageVideosPage() {
               {/* Visibility */}
               <div className="flex-shrink-0">
                 <Select defaultValue="public">
-                  <SelectTrigger className="w-32 bg-gray-800 border-gray-700 text-white text-sm">
+                  <SelectTrigger className="w-32 bg-zinc-800 border-zinc-700 text-white text-sm">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-gray-800 border-gray-700 text-white">
+                  <SelectContent className="bg-zinc-800 border-zinc-700 text-white">
                     <SelectItem value="public">
                       <div className="flex items-center gap-2">
                         <Eye className="h-3 w-3" />
@@ -63,7 +63,7 @@ export default function ManageVideosPage() {
 
               {/* Actions */}
               <div className="flex gap-2 flex-shrink-0">
-                <Button asChild size="icon" variant="secondary" className="bg-gray-800 hover:bg-gray-700 text-white">
+                <Button asChild size="icon" variant="secondary" className="bg-zinc-800 hover:bg-zinc-700 text-white">
                   <Link href={`/me/videos/${video.id}/edit`}>
                     <Pencil className="h-4 w-4" />
                   </Link>
@@ -71,7 +71,7 @@ export default function ManageVideosPage() {
                 <Button
                   size="icon"
                   variant="secondary"
-                  className="bg-gray-800 hover:bg-red-900 text-white hover:text-red-500"
+                  className="bg-zinc-800 hover:bg-red-900 text-white hover:text-red-500"
                 >
                   <Trash2 className="h-4 w-4" />
                 </Button>

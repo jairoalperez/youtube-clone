@@ -15,7 +15,7 @@ export function VideoCard({ video, variant = "vertical" }: VideoCardProps) {
         return (
             <Link href={`/watch/${video.id}`} className="group flex gap-2 w-full">
                 {/* Thumbnail */}
-                <div className="relative w-40 h-24 bg-gray-900 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="relative w-40 h-24 bg-zinc-900 rounded-lg overflow-hidden flex-shrink-0">
                     <Image
                         src={video.thumbnail || "/placeholder.svg"}
                         alt={video.title}
@@ -45,7 +45,7 @@ export function VideoCard({ video, variant = "vertical" }: VideoCardProps) {
         <Link href={`/watch/${video.id}`} className="group">
             <Card className="bg-transparent border-none overflow-hidden">
                 {/* Thumbnail */}
-                <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden mb-3">
+                <div className="relative aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3">
                     <Image
                         src={video.thumbnail || "/placeholder.svg"}
                         alt={video.title}
@@ -61,7 +61,7 @@ export function VideoCard({ video, variant = "vertical" }: VideoCardProps) {
                 <div className="flex gap-3">
                     <Avatar className="h-9 w-9 flex-shrink-0">
                         <AvatarImage src={video.channelAvatar || "/placeholder.svg"} alt={video.channelName} />
-                        <AvatarFallback className="bg-gray-700 text-white">{video.channelName.charAt(0)}</AvatarFallback>
+                        <AvatarFallback className="bg-zinc-700 text-white">{video.channelName.charAt(0)}</AvatarFallback>
                     </Avatar>
 
                     <div className="flex-1 min-w-0">

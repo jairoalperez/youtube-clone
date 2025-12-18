@@ -23,14 +23,14 @@ export default function EditVideoPage({ params }: { params: Promise<{ id: string
       <div className="p-6 max-w-4xl mx-auto">
         <h1 className="text-white text-2xl font-bold mb-6">Edit Video</h1>
 
-        <Card className="bg-gray-900 border-gray-800">
+        <Card className="bg-zinc-900 border-zinc-800">
           <CardContent className="p-6">
             <div className="space-y-6">
               <div>
                 <Label htmlFor="title" className="text-white">
                   Title
                 </Label>
-                <Input id="title" defaultValue={video.title} className="bg-gray-800 border-gray-700 text-white mt-2" />
+                <Input id="title" defaultValue={video.title} className="bg-zinc-800 border-zinc-700 text-white mt-2" />
               </div>
 
               <div>
@@ -41,14 +41,14 @@ export default function EditVideoPage({ params }: { params: Promise<{ id: string
                   id="description"
                   defaultValue={video.description}
                   rows={5}
-                  className="bg-gray-800 border-gray-700 text-white mt-2"
+                  className="bg-zinc-800 border-zinc-700 text-white mt-2"
                 />
               </div>
 
               <div>
                 <Label className="text-white">Thumbnail</Label>
                 <div className="mt-2 grid grid-cols-2 gap-4">
-                  <div className="relative aspect-video bg-gray-800 rounded-lg overflow-hidden">
+                  <div className="relative aspect-video bg-zinc-800 rounded-lg overflow-hidden">
                     <Image
                       src={video.thumbnail || "/placeholder.svg"}
                       alt="Current thumbnail"
@@ -56,7 +56,7 @@ export default function EditVideoPage({ params }: { params: Promise<{ id: string
                       className="object-cover"
                     />
                   </div>
-                  <div className="border-2 border-dashed border-gray-700 rounded-lg p-8 flex flex-col items-center justify-center hover:border-orange-500 transition-colors cursor-pointer">
+                  <div className="border-2 border-dashed border-zinc-700 rounded-lg p-8 flex flex-col items-center justify-center hover:border-orange-500 transition-colors cursor-pointer">
                     <Upload className="h-8 w-8 text-gray-500 mb-2" />
                     <p className="text-gray-400 text-sm text-center">Upload new thumbnail</p>
                   </div>
@@ -68,10 +68,10 @@ export default function EditVideoPage({ params }: { params: Promise<{ id: string
                   Visibility
                 </Label>
                 <Select defaultValue="public">
-                  <SelectTrigger className="bg-gray-800 border-gray-700 text-white mt-2">
+                  <SelectTrigger className="bg-zinc-800 border-zinc-700 text-white mt-2">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-gray-800 border-gray-700 text-white">
+                  <SelectContent className="bg-zinc-800 border-zinc-700 text-white">
                     <SelectItem value="public">Public</SelectItem>
                     <SelectItem value="unlisted">Unlisted</SelectItem>
                     <SelectItem value="private">Private</SelectItem>
@@ -83,7 +83,7 @@ export default function EditVideoPage({ params }: { params: Promise<{ id: string
                 <Button
                   variant="secondary"
                   onClick={() => router.back()}
-                  className="bg-gray-800 hover:bg-gray-700 text-white"
+                  className="bg-zinc-800 hover:bg-zinc-700 text-white"
                 >
                   Cancel
                 </Button>

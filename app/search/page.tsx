@@ -18,10 +18,10 @@ export default function SearchPage() {
             Search results for: <span className="text-orange-500">{query}</span>
           </h1>
           <Select defaultValue="relevance">
-            <SelectTrigger className="w-48 bg-gray-900 border-gray-700 text-white">
+            <SelectTrigger className="w-48 bg-zinc-900 border-zinc-700 text-white">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
-            <SelectContent className="bg-gray-900 border-gray-700 text-white">
+            <SelectContent className="bg-zinc-900 border-zinc-700 text-white">
               <SelectItem value="relevance">Relevance</SelectItem>
               <SelectItem value="date">Upload date</SelectItem>
               <SelectItem value="views">View count</SelectItem>

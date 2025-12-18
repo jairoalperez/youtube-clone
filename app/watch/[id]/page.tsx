@@ -28,8 +28,8 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
           {/* Main content */}
           <div className="lg:col-span-2">
             {/* Video player */}
-            <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center mb-4">
-              <div className="text-gray-500 text-center">
+            <div className="aspect-video bg-zinc-900 rounded-lg flex items-center justify-center mb-4">
+              <div className="text-zinc-500 text-center">
                 <div className="text-6xl mb-2">▶</div>
                 <div className="text-lg">Video Player</div>
                 <div className="text-sm">{video.duration}</div>
@@ -40,11 +40,11 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
             <h1 className="text-white text-xl font-semibold mb-3">{video.title}</h1>
 
             {/* Channel row */}
-            <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-800">
+            <div className="flex items-center justify-between mb-4 pb-4 border-b border-zinc-800">
               <div className="flex items-center gap-4">
                 <Avatar className="h-10 w-10">
                   <AvatarImage src={video.channelAvatar || "/placeholder.svg"} alt={video.channelName} />
-                  <AvatarFallback className="bg-gray-700 text-white">{video.channelName.charAt(0)}</AvatarFallback>
+                  <AvatarFallback className="bg-zinc-700 text-white">{video.channelName.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="text-white font-medium">{video.channelName}</p>
@@ -54,7 +54,7 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
                   onClick={() => setIsSubscribed(!isSubscribed)}
                   className={
                     isSubscribed
-                      ? "bg-gray-700 hover:bg-gray-600 text-white"
+                      ? "bg-zinc-700 hover:bg-zinc-600 text-white"
                       : "bg-orange-500 hover:bg-orange-600 text-black"
                   }
                 >
@@ -69,7 +69,7 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
                   className={
                     isLiked
                       ? "bg-orange-500/20 hover:bg-orange-500/30 text-orange-500 border-orange-500/30"
-                      : "bg-gray-800 hover:bg-gray-700 text-white"
+                      : "bg-zinc-800 hover:bg-zinc-700 text-white"
                   }
                 >
                   <ThumbsUp className="h-4 w-4 mr-2" />
@@ -81,7 +81,7 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
                   className={
                     isWatchLater
                       ? "bg-orange-500/20 hover:bg-orange-500/30 text-orange-500 border-orange-500/30"
-                      : "bg-gray-800 hover:bg-gray-700 text-white"
+                      : "bg-zinc-800 hover:bg-zinc-700 text-white"
                   }
                 >
                   <Clock className="h-4 w-4 mr-2" />
@@ -91,7 +91,7 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
             </div>
 
             {/* Description */}
-            <div className="bg-gray-900 rounded-lg p-4 mb-6">
+            <div className="bg-zinc-900 rounded-lg p-4 mb-6">
               <div className="flex items-center gap-4 text-sm text-gray-300 mb-2">
                 <span>{video.views} views</span>
                 <span>{video.uploadedAt}</span>
@@ -130,7 +130,7 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
                     placeholder="Add a comment..."
                     value={commentText}
                     onChange={(e) => setCommentText(e.target.value)}
-                    className="bg-transparent border-0 border-b border-gray-700 rounded-none focus:border-orange-500 text-white placeholder:text-gray-500 resize-none"
+                    className="bg-transparent border-0 border-b border-zinc-700 rounded-none focus:border-orange-500 text-white placeholder:text-gray-500 resize-none"
                     rows={1}
                   />
                   {commentText && (
@@ -139,7 +139,7 @@ export default function WatchPage({ params }: { params: Promise<{ id: string }> 
                         size="sm"
                         variant="ghost"
                         onClick={() => setCommentText("")}
-                        className="text-gray-400 hover:text-white hover:bg-gray-800"
+                        className="text-gray-400 hover:text-white hover:bg-zinc-800"
                       >
                         Cancel
                       </Button>

@@ -24,7 +24,7 @@ export function Sidebar({ isOpen = true }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "fixed left-0 top-[57px] h-[calc(100vh-57px)] bg-black border-r border-gray-800 transition-all duration-300 ease-in-out z-40 overflow-y-auto",
+        "fixed left-0 top-[57px] h-[calc(100vh-57px)] bg-black border-r border-zinc-800 transition-all duration-300 ease-in-out z-40 overflow-y-auto",
         isOpen ? "w-64" : "w-0 md:w-20",
       )}
     >
@@ -37,7 +37,7 @@ export function Sidebar({ isOpen = true }: SidebarProps) {
               href={item.href}
               className={cn(
                 "flex items-center gap-4 px-3 py-2.5 rounded-lg transition-colors duration-200",
-                isActive ? "bg-orange-500/20 text-orange-500" : "text-gray-300 hover:bg-gray-800 hover:text-white",
+                isActive ? "bg-orange-500/20 text-orange-500" : "text-gray-300 hover:bg-zinc-800 hover:text-white",
               )}
             >
               <item.icon className="h-5 w-5 flex-shrink-0" />

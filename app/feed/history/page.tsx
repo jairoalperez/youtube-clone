@@ -22,13 +22,13 @@ export default function HistoryPage() {
               className={
                 isPaused
                   ? "bg-orange-500/20 text-orange-500 hover:bg-orange-500/30"
-                  : "bg-gray-800 hover:bg-gray-700 text-white"
+                  : "bg-zinc-800 hover:bg-zinc-700 text-white"
               }
             >
               <Pause className="h-4 w-4 mr-2" />
               {isPaused ? "Resume History" : "Pause History"}
             </Button>
-            <Button variant="secondary" className="bg-gray-800 hover:bg-gray-700 text-white">
+            <Button variant="secondary" className="bg-zinc-800 hover:bg-zinc-700 text-white">
               <Trash2 className="h-4 w-4 mr-2" />
               Clear History
             </Button>

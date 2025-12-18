@@ -45,23 +45,23 @@ export default function UploadPage() {
             <div key={s} className="flex items-center gap-2">
               <div
                 className={`flex items-center justify-center w-8 h-8 rounded-full ${
-                  step >= s ? "bg-orange-500 text-black" : "bg-gray-800 text-gray-400"
+                  step >= s ? "bg-orange-500 text-black" : "bg-zinc-800 text-gray-400"
                 }`}
               >
                 {step > s ? <Check className="h-4 w-4" /> : s}
               </div>
               <span className={step >= s ? "text-white" : "text-gray-400"}>Step {s}</span>
-              {s < 3 && <div className="w-12 h-0.5 bg-gray-800" />}
+              {s < 3 && <div className="w-12 h-0.5 bg-zinc-800" />}
             </div>
           ))}
         </div>
 
         {/* Step 1: Upload */}
         {step === 1 && (
-          <Card className="bg-gray-900 border-gray-800">
+          <Card className="bg-zinc-900 border-zinc-800">
             <CardContent className="p-12">
               <div className="text-center">
-                <div className="mx-auto w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center mb-4">
+                <div className="mx-auto w-24 h-24 bg-zinc-800 rounded-full flex items-center justify-center mb-4">
                   <Upload className="h-12 w-12 text-orange-500" />
                 </div>
                 <h2 className="text-white text-xl font-semibold mb-2">
@@ -71,7 +71,7 @@ export default function UploadPage() {
 
                 {uploading ? (
                   <div className="max-w-md mx-auto">
-                    <div className="w-full bg-gray-800 rounded-full h-2 mb-2">
+                    <div className="w-full bg-zinc-800 rounded-full h-2 mb-2">
                       <div
                         className="bg-orange-500 h-2 rounded-full transition-all duration-300"
                         style={{ width: `${progress}%` }}
@@ -91,7 +91,7 @@ export default function UploadPage() {
 
         {/* Step 2: Details */}
         {step === 2 && (
-          <Card className="bg-gray-900 border-gray-800">
+          <Card className="bg-zinc-900 border-zinc-800">
             <CardContent className="p-6">
               <div className="space-y-6">
                 <div>
@@ -101,7 +101,7 @@ export default function UploadPage() {
                   <Input
                     id="title"
                     placeholder="Enter video title"
-                    className="bg-gray-800 border-gray-700 text-white mt-2"
+                    className="bg-zinc-800 border-zinc-700 text-white mt-2"
                   />
                 </div>
 
@@ -113,13 +113,13 @@ export default function UploadPage() {
                     id="description"
                     placeholder="Tell viewers about your video"
                     rows={5}
-                    className="bg-gray-800 border-gray-700 text-white mt-2"
+                    className="bg-zinc-800 border-zinc-700 text-white mt-2"
                   />
                 </div>
 
                 <div>
                   <Label className="text-white">Thumbnail</Label>
-                  <div className="mt-2 border-2 border-dashed border-gray-700 rounded-lg p-8 text-center hover:border-orange-500 transition-colors cursor-pointer">
+                  <div className="mt-2 border-2 border-dashed border-zinc-700 rounded-lg p-8 text-center hover:border-orange-500 transition-colors cursor-pointer">
                     <Upload className="h-8 w-8 text-gray-500 mx-auto mb-2" />
                     <p className="text-gray-400 text-sm">Upload thumbnail</p>
                   </div>
@@ -130,10 +130,10 @@ export default function UploadPage() {
                     Visibility
                   </Label>
                   <Select defaultValue="public">
-                    <SelectTrigger className="bg-gray-800 border-gray-700 text-white mt-2">
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700 text-white mt-2">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-gray-800 border-gray-700 text-white">
+                    <SelectContent className="bg-zinc-800 border-zinc-700 text-white">
                       <SelectItem value="public">Public</SelectItem>
                       <SelectItem value="unlisted">Unlisted</SelectItem>
                       <SelectItem value="private">Private</SelectItem>
@@ -145,7 +145,7 @@ export default function UploadPage() {
                   <Button
                     variant="secondary"
                     onClick={() => setStep(1)}
-                    className="bg-gray-800 hover:bg-gray-700 text-white"
+                    className="bg-zinc-800 hover:bg-zinc-700 text-white"
                   >
                     Back
                   </Button>
@@ -160,7 +160,7 @@ export default function UploadPage() {
 
         {/* Step 3: Success */}
         {step === 3 && (
-          <Card className="bg-gray-900 border-gray-800">
+          <Card className="bg-zinc-900 border-zinc-800">
             <CardContent className="p-12">
               <div className="text-center">
                 <div className="mx-auto w-24 h-24 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
@@ -169,7 +169,7 @@ export default function UploadPage() {
                 <h2 className="text-white text-xl font-semibold mb-2">Video Published!</h2>
                 <p className="text-gray-400 mb-6">Your video has been successfully uploaded and is now live.</p>
                 <div className="flex gap-3 justify-center">
-                  <Button asChild variant="secondary" className="bg-gray-800 hover:bg-gray-700 text-white">
+                  <Button asChild variant="secondary" className="bg-zinc-800 hover:bg-zinc-700 text-white">
                     <Link href="/watch/my-vid-1">Watch Video</Link>
                   </Button>
                   <Button

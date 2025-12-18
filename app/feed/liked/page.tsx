@@ -22,7 +22,7 @@ export default function LikedVideosPage() {
                 <Button
                   size="icon"
                   variant="secondary"
-                  className="absolute top-2 right-2 h-8 w-8 bg-orange-500/80 hover:bg-gray-800 text-black hover:text-white opacity-0 group-hover:opacity-100 transition-all"
+                  className="absolute top-2 right-2 h-8 w-8 bg-orange-500/80 hover:bg-zinc-800 text-black hover:text-white opacity-0 group-hover:opacity-100 transition-all"
                 >
                   <ThumbsUp className="h-4 w-4" />
                 </Button>

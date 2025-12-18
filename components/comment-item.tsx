@@ -15,7 +15,7 @@ export function CommentItem({ comment }: CommentItemProps) {
     <div className="flex gap-3">
       <Avatar className="h-10 w-10 flex-shrink-0">
         <AvatarImage src={comment.userAvatar || "/placeholder.svg"} alt={comment.userName} />
-        <AvatarFallback className="bg-gray-700 text-white">{comment.userName.charAt(0)}</AvatarFallback>
+        <AvatarFallback className="bg-zinc-700 text-white">{comment.userName.charAt(0)}</AvatarFallback>
       </Avatar>
 
       <div className="flex-1">
@@ -32,17 +32,17 @@ export function CommentItem({ comment }: CommentItemProps) {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="h-8 w-8 text-gray-400 hover:text-white hover:bg-gray-800"
+                  className="h-8 w-8 text-gray-400 hover:text-white hover:bg-zinc-800"
                 >
                   <MoreVertical className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="bg-gray-900 border-gray-800 text-white">
-                <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800">
+              <DropdownMenuContent align="start" className="bg-zinc-900 border-zinc-800 text-white">
+                <DropdownMenuItem className="hover:bg-zinc-800 focus:bg-zinc-800">
                   <Pencil className="h-4 w-4 mr-2" />
                   Edit
                 </DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800 text-red-500 focus:text-red-500">
+                <DropdownMenuItem className="hover:bg-zinc-800 focus:bg-zinc-800 text-red-500 focus:text-red-500">
                   <Trash2 className="h-4 w-4 mr-2" />
                   Delete
                 </DropdownMenuItem>

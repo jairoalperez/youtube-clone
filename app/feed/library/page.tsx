@@ -18,7 +18,7 @@ export default function LibraryPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* History */}
           <Link href="/feed/history">
-            <Card className="bg-gray-900 border-gray-800 hover:bg-gray-800 transition-colors cursor-pointer h-full">
+            <Card className="bg-zinc-900 border-zinc-800 hover:bg-zinc-800 transition-colors cursor-pointer h-full">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-white">
                   <History className="h-6 w-6 text-orange-500" />
@@ -29,7 +29,7 @@ export default function LibraryPage() {
                 <div className="space-y-2">
                   {historyVideos.map((video) => (
                     <div key={video.id} className="flex gap-2">
-                      <div className="relative w-24 h-14 bg-gray-800 rounded flex-shrink-0">
+                      <div className="relative w-24 h-14 bg-zinc-800 rounded flex-shrink-0">
                         <Image
                           src={video.thumbnail || "/placeholder.svg"}
                           alt={video.title}
@@ -49,7 +49,7 @@ export default function LibraryPage() {
 
           {/* Watch Later */}
           <Link href="/feed/watch-later">
-            <Card className="bg-gray-900 border-gray-800 hover:bg-gray-800 transition-colors cursor-pointer h-full">
+            <Card className="bg-zinc-900 border-zinc-800 hover:bg-zinc-800 transition-colors cursor-pointer h-full">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-white">
                   <Clock className="h-6 w-6 text-orange-500" />
@@ -60,7 +60,7 @@ export default function LibraryPage() {
                 <div className="space-y-2">
                   {watchLaterVideos.map((video) => (
                     <div key={video.id} className="flex gap-2">
-                      <div className="relative w-24 h-14 bg-gray-800 rounded flex-shrink-0">
+                      <div className="relative w-24 h-14 bg-zinc-800 rounded flex-shrink-0">
                         <Image
                           src={video.thumbnail || "/placeholder.svg"}
                           alt={video.title}
@@ -80,7 +80,7 @@ export default function LibraryPage() {
 
           {/* Liked Videos */}
           <Link href="/feed/liked">
-            <Card className="bg-gray-900 border-gray-800 hover:bg-gray-800 transition-colors cursor-pointer h-full">
+            <Card className="bg-zinc-900 border-zinc-800 hover:bg-zinc-800 transition-colors cursor-pointer h-full">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-white">
                   <ThumbsUp className="h-6 w-6 text-orange-500" />
@@ -91,7 +91,7 @@ export default function LibraryPage() {
                 <div className="space-y-2">
                   {likedVideos.map((video) => (
                     <div key={video.id} className="flex gap-2">
-                      <div className="relative w-24 h-14 bg-gray-800 rounded flex-shrink-0">
+                      <div className="relative w-24 h-14 bg-zinc-800 rounded flex-shrink-0">
                         <Image
                           src={video.thumbnail || "/placeholder.svg"}
                           alt={video.title}

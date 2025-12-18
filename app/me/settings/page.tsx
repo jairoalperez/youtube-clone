@@ -17,7 +17,7 @@ export default function SettingsPage() {
 
         <div className="space-y-6">
           {/* Profile */}
-          <Card className="bg-gray-900 border-gray-800">
+          <Card className="bg-zinc-900 border-zinc-800">
             <CardHeader>
               <CardTitle className="text-white">Profile</CardTitle>
             </CardHeader>
@@ -31,7 +31,7 @@ export default function SettingsPage() {
                       {currentUser.name.charAt(0)}
                     </AvatarFallback>
                   </Avatar>
-                  <Button variant="secondary" className="bg-gray-800 hover:bg-gray-700 text-white">
+                  <Button variant="secondary" className="bg-zinc-800 hover:bg-zinc-700 text-white">
                     <Upload className="h-4 w-4 mr-2" />
                     Change Photo
                   </Button>
@@ -45,7 +45,7 @@ export default function SettingsPage() {
                 <Input
                   id="name"
                   defaultValue={currentUser.name}
-                  className="bg-gray-800 border-gray-700 text-white mt-2"
+                  className="bg-zinc-800 border-zinc-700 text-white mt-2"
                 />
               </div>
 
@@ -56,7 +56,7 @@ export default function SettingsPage() {
                 <Input
                   id="handle"
                   defaultValue={currentUser.handle}
-                  className="bg-gray-800 border-gray-700 text-white mt-2"
+                  className="bg-zinc-800 border-zinc-700 text-white mt-2"
                 />
               </div>
 
@@ -68,7 +68,7 @@ export default function SettingsPage() {
                   id="email"
                   type="email"
                   defaultValue={currentUser.email}
-                  className="bg-gray-800 border-gray-700 text-white mt-2"
+                  className="bg-zinc-800 border-zinc-700 text-white mt-2"
                 />
               </div>
 
@@ -77,7 +77,7 @@ export default function SettingsPage() {
           </Card>
 
           {/* Security */}
-          <Card className="bg-gray-900 border-gray-800">
+          <Card className="bg-zinc-900 border-zinc-800">
             <CardHeader>
               <CardTitle className="text-white">Security</CardTitle>
             </CardHeader>
@@ -86,21 +86,21 @@ export default function SettingsPage() {
                 <Label htmlFor="current-password" className="text-white">
                   Current Password
                 </Label>
-                <Input id="current-password" type="password" className="bg-gray-800 border-gray-700 text-white mt-2" />
+                <Input id="current-password" type="password" className="bg-zinc-800 border-zinc-700 text-white mt-2" />
               </div>
 
               <div>
                 <Label htmlFor="new-password" className="text-white">
                   New Password
                 </Label>
-                <Input id="new-password" type="password" className="bg-gray-800 border-gray-700 text-white mt-2" />
+                <Input id="new-password" type="password" className="bg-zinc-800 border-zinc-700 text-white mt-2" />
               </div>
 
               <div>
                 <Label htmlFor="confirm-password" className="text-white">
                   Confirm New Password
                 </Label>
-                <Input id="confirm-password" type="password" className="bg-gray-800 border-gray-700 text-white mt-2" />
+                <Input id="confirm-password" type="password" className="bg-zinc-800 border-zinc-700 text-white mt-2" />
               </div>
 
               <Button className="bg-orange-500 hover:bg-orange-600 text-black">Change Password</Button>
@@ -108,7 +108,7 @@ export default function SettingsPage() {
           </Card>
 
           {/* Danger Zone */}
-          <Card className="bg-gray-900 border-red-900/50">
+          <Card className="bg-zinc-900 border-red-900/50">
             <CardHeader>
               <CardTitle className="text-white">Danger Zone</CardTitle>
             </CardHeader>

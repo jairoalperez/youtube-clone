@@ -17,12 +17,12 @@ export default function MyChannelPage() {
     <AppLayout>
       <div>
         {/* Banner */}
-        <div className="relative h-48 bg-gray-900">
+        <div className="relative h-48 bg-zinc-900">
           <Image src={banner || "/placeholder.svg"} alt={currentUser.name} fill className="object-cover" />
         </div>
 
         {/* Channel header */}
-        <div className="bg-black border-b border-gray-800">
+        <div className="bg-black border-b border-zinc-800">
           <div className="container mx-auto px-6 py-6">
             <div className="flex items-start gap-6">
               <Avatar className="h-20 w-20">
@@ -41,7 +41,7 @@ export default function MyChannelPage() {
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black">
                     <Link href="/me/upload">Upload Video</Link>
                   </Button>
-                  <Button asChild variant="secondary" className="bg-gray-800 hover:bg-gray-700 text-white">
+                  <Button asChild variant="secondary" className="bg-zinc-800 hover:bg-zinc-700 text-white">
                     <Link href="/me/videos">Manage Videos</Link>
                   </Button>
                 </div>
@@ -53,7 +53,7 @@ export default function MyChannelPage() {
         {/* Tabs */}
         <div className="container mx-auto px-6 py-6">
           <Tabs defaultValue="videos" className="w-full">
-            <TabsList className="bg-transparent border-b border-gray-800 rounded-none w-full justify-start h-auto p-0">
+            <TabsList className="bg-transparent border-b border-zinc-800 rounded-none w-full justify-start h-auto p-0">
               <TabsTrigger
                 value="videos"
                 className="data-[state=active]:bg-transparent data-[state=active]:text-orange-500 data-[state=active]:border-b-2 data-[state=active]:border-orange-500 rounded-none text-gray-400"

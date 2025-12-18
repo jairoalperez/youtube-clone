@@ -19,17 +19,17 @@ export default function ChannelPage({ params }: { params: Promise<{ handle: stri
     <AppLayout>
       <div>
         {/* Banner */}
-        <div className="relative h-48 bg-gray-900">
+        <div className="relative h-48 bg-zinc-900">
           <Image src={channel.banner || "/placeholder.svg"} alt={channel.name} fill className="object-cover" />
         </div>
 
         {/* Channel header */}
-        <div className="bg-black border-b border-gray-800">
+        <div className="bg-black border-b border-zinc-800">
           <div className="container mx-auto px-6 py-6">
             <div className="flex items-start gap-6">
               <Avatar className="h-20 w-20">
                 <AvatarImage src={channel.avatar || "/placeholder.svg"} alt={channel.name} />
-                <AvatarFallback className="bg-gray-700 text-white text-2xl">{channel.name.charAt(0)}</AvatarFallback>
+                <AvatarFallback className="bg-zinc-700 text-white text-2xl">{channel.name.charAt(0)}</AvatarFallback>
               </Avatar>
               <div className="flex-1">
                 <h1 className="text-white text-3xl font-bold mb-1">{channel.name}</h1>
@@ -40,7 +40,7 @@ export default function ChannelPage({ params }: { params: Promise<{ handle: stri
                   onClick={() => setIsSubscribed(!isSubscribed)}
                   className={
                     isSubscribed
-                      ? "bg-gray-700 hover:bg-gray-600 text-white"
+                      ? "bg-zinc-700 hover:bg-zinc-600 text-white"
                       : "bg-orange-500 hover:bg-orange-600 text-black"
                   }
                 >
@@ -54,7 +54,7 @@ export default function ChannelPage({ params }: { params: Promise<{ handle: stri
         {/* Tabs */}
         <div className="container mx-auto px-6 py-6">
           <Tabs defaultValue="videos" className="w-full">
-            <TabsList className="bg-transparent border-b border-gray-800 rounded-none w-full justify-start h-auto p-0">
+            <TabsList className="bg-transparent border-b border-zinc-800 rounded-none w-full justify-start h-auto p-0">
               <TabsTrigger
                 value="videos"
                 className="data-[state=active]:bg-transparent data-[state=active]:text-orange-500 data-[state=active]:border-b-2 data-[state=active]:border-orange-500 rounded-none text-gray-400"

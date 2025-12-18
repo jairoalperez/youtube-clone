@@ -18,7 +18,7 @@ export default function HomePage() {
               className={
                 index === 0
                   ? "bg-orange-500 hover:bg-orange-600 text-black cursor-pointer whitespace-nowrap"
-                  : "bg-gray-800 hover:bg-gray-700 text-gray-200 cursor-pointer whitespace-nowrap"
+                  : "bg-zinc-800 hover:bg-zinc-700 text-gray-200 cursor-pointer whitespace-nowrap"
               }
             >
               {filter}

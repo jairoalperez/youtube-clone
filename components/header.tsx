@@ -34,14 +34,14 @@ export function Header({ onMenuClick }: HeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-black border-b border-gray-800">
+    <header className="sticky top-0 z-50 bg-black border-b border-zinc-800">
       <div className="flex items-center justify-between gap-4 px-4 py-2">
         {/* Left: Menu + Logo */}
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
             size="icon"
-            className="text-gray-300 hover:text-white hover:bg-gray-800"
+            className="text-gray-300 hover:text-white hover:bg-zinc-800"
             onClick={onMenuClick}
           >
             <Menu className="h-6 w-6" />
@@ -50,7 +50,7 @@ export function Header({ onMenuClick }: HeaderProps) {
             href="/"
             className="flex items-center gap-1 text-xl font-bold text-white hover:text-orange-500 transition-colors"
           >
-            <span className="bg-orange-500 text-black px-2 py-1 rounded">CigarTube</span>
+            <span className="bg-orange-500 text-black px-2 py-1 rounded">YT Clone</span>
           </Link>
         </div>
 
@@ -63,10 +63,10 @@ export function Header({ onMenuClick }: HeaderProps) {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-gray-900 border-gray-700 text-white placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20"
+                className="w-full bg-zinc-900 border-zinc-700 text-white placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20"
               />
             </div>
-            <Button type="submit" size="icon" className="bg-gray-800 hover:bg-gray-700 text-white">
+            <Button type="submit" size="icon" className="bg-zinc-800 hover:bg-zinc-700 text-white">
               <Search className="h-5 w-5" />
             </Button>
           </div>
@@ -74,7 +74,7 @@ export function Header({ onMenuClick }: HeaderProps) {
 
         {/* Right: User Menu */}
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" asChild className="text-gray-300 hover:text-white hover:bg-gray-800">
+          <Button variant="ghost" size="icon" asChild className="text-gray-300 hover:text-white hover:bg-zinc-800">
             <Link href="/me/upload">
               <Upload className="h-5 w-5" />
             </Link>
@@ -89,21 +89,21 @@ export function Header({ onMenuClick }: HeaderProps) {
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56 bg-gray-900 border-gray-800 text-white">
-              <DropdownMenuItem asChild className="hover:bg-gray-800 focus:bg-gray-800">
+            <DropdownMenuContent align="end" className="w-56 bg-zinc-900 border-zinc-800 text-white">
+              <DropdownMenuItem asChild className="hover:bg-zinc-800 focus:bg-zinc-800">
                 <Link href="/me/channel">Your Channel</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild className="hover:bg-gray-800 focus:bg-gray-800">
+              <DropdownMenuItem asChild className="hover:bg-zinc-800 focus:bg-zinc-800">
                 <Link href="/me/upload">Upload</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild className="hover:bg-gray-800 focus:bg-gray-800">
+              <DropdownMenuItem asChild className="hover:bg-zinc-800 focus:bg-zinc-800">
                 <Link href="/feed/library">Library</Link>
               </DropdownMenuItem>
-              <DropdownMenuSeparator className="bg-gray-800" />
-              <DropdownMenuItem asChild className="hover:bg-gray-800 focus:bg-gray-800">
+              <DropdownMenuSeparator className="bg-zinc-800" />
+              <DropdownMenuItem asChild className="hover:bg-zinc-800 focus:bg-zinc-800">
                 <Link href="/me/settings">Settings</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800">Sign out</DropdownMenuItem>
+              <DropdownMenuItem className="hover:bg-zinc-800 focus:bg-zinc-800">Sign out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
