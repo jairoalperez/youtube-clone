@@ -13,7 +13,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-black">
       <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
       <Sidebar isOpen={sidebarOpen} />
-      <main className={`pt-[57px] transition-all duration-300 ${sidebarOpen ? "md:pl-64" : "md:pl-20"}`}>
+      <main className={`pt-2 transition-all duration-300 ${sidebarOpen ? "md:pl-64" : "md:pl-20"}`}>
         {children}
       </main>
     </div>
